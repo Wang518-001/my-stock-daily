@@ -24,11 +24,11 @@ STOCKS = [
     ("301366", "SZ", "一博科技"),
 ]
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
-OPENAI_BASE_URL = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1")
-OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY") or ""
+OPENAI_BASE_URL = os.getenv("OPENAI_BASE_URL") or "https://api.openai.com/v1"
+OPENAI_MODEL = os.getenv("OPENAI_MODEL") or "gpt-4o-mini"
 
-WECOM_WEBHOOK = os.getenv("WECOM_WEBHOOK", "")
+WECOM_WEBHOOK = os.getenv("WECOM_WEBHOOK") or ""
 
 # 推送时间：收盘后（15:30）和盘中（10:00, 14:00）
 PUSH_TIMES = ["10:00", "14:00", "15:30"]

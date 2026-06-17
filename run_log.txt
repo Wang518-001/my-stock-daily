@@ -1,0 +1,263 @@
+﻿2026-06-17T00:34:12.8635928Z Current runner version: '2.335.1'
+2026-06-17T00:34:12.8653867Z ##[group]Runner Image Provisioner
+2026-06-17T00:34:12.8654450Z Hosted Compute Agent
+2026-06-17T00:34:12.8654794Z Version: 20260611.554
+2026-06-17T00:34:12.8655216Z Commit: 5e0782fdc9014723d3be820dd114dd31555c2bd1
+2026-06-17T00:34:12.8655676Z Build Date: 2026-06-11T21:40:46Z
+2026-06-17T00:34:12.8656067Z Worker ID: {6c3800c7-702d-41b9-9d80-5e2d872ea82a}
+2026-06-17T00:34:12.8656508Z Azure Region: westus3
+2026-06-17T00:34:12.8656843Z ##[endgroup]
+2026-06-17T00:34:12.8657695Z ##[group]Operating System
+2026-06-17T00:34:12.8658125Z Ubuntu
+2026-06-17T00:34:12.8658457Z 24.04.4
+2026-06-17T00:34:12.8658804Z LTS
+2026-06-17T00:34:12.8659108Z ##[endgroup]
+2026-06-17T00:34:12.8659419Z ##[group]Runner Image
+2026-06-17T00:34:12.8659840Z Image: ubuntu-24.04
+2026-06-17T00:34:12.8660173Z Version: 20260615.205.1
+2026-06-17T00:34:12.8660928Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260615.205/images/ubuntu/Ubuntu2404-Readme.md
+2026-06-17T00:34:12.8661871Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260615.205
+2026-06-17T00:34:12.8662482Z ##[endgroup]
+2026-06-17T00:34:12.8663156Z ##[group]GITHUB_TOKEN Permissions
+2026-06-17T00:34:12.8664454Z Contents: read
+2026-06-17T00:34:12.8664815Z Metadata: read
+2026-06-17T00:34:12.8665216Z Packages: read
+2026-06-17T00:34:12.8665751Z ##[endgroup]
+2026-06-17T00:34:12.8666985Z Secret source: Actions
+2026-06-17T00:34:12.8667539Z Prepare workflow directory
+2026-06-17T00:34:12.8968342Z Prepare all required actions
+2026-06-17T00:34:12.8992597Z Getting action download info
+2026-06-17T00:34:13.2451499Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-06-17T00:34:13.3996490Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-06-17T00:34:13.5563287Z Complete job name: analyze
+2026-06-17T00:34:13.5953895Z ##[group]Run actions/checkout@v4
+2026-06-17T00:34:13.5954395Z with:
+2026-06-17T00:34:13.5954659Z   repository: Wang518-001/my-stock-daily
+2026-06-17T00:34:13.5957006Z   token: ***
+2026-06-17T00:34:13.5957231Z   ssh-strict: true
+2026-06-17T00:34:13.5957463Z   ssh-user: git
+2026-06-17T00:34:13.5957700Z   persist-credentials: true
+2026-06-17T00:34:13.5957957Z   clean: true
+2026-06-17T00:34:13.5958197Z   sparse-checkout-cone-mode: true
+2026-06-17T00:34:13.5958476Z   fetch-depth: 1
+2026-06-17T00:34:13.5958708Z   fetch-tags: false
+2026-06-17T00:34:13.5958942Z   show-progress: true
+2026-06-17T00:34:13.5959179Z   lfs: false
+2026-06-17T00:34:13.5959397Z   submodules: false
+2026-06-17T00:34:13.5959631Z   set-safe-directory: true
+2026-06-17T00:34:13.5959942Z env:
+2026-06-17T00:34:13.5960677Z   OPENAI_API_KEY: ***
+2026-06-17T00:34:13.5960913Z   OPENAI_BASE_URL: 
+2026-06-17T00:34:13.5961144Z   OPENAI_MODEL: 
+2026-06-17T00:34:13.5961504Z   WECOM_WEBHOOK: 
+2026-06-17T00:34:13.5961753Z ##[endgroup]
+2026-06-17T00:34:13.6648358Z Syncing repository: Wang518-001/my-stock-daily
+2026-06-17T00:34:13.6649345Z ##[group]Getting Git version info
+2026-06-17T00:34:13.6649731Z Working directory is '/home/runner/work/my-stock-daily/my-stock-daily'
+2026-06-17T00:34:13.6650298Z [command]/usr/bin/git version
+2026-06-17T00:34:13.6888859Z git version 2.54.0
+2026-06-17T00:34:13.6903439Z ##[endgroup]
+2026-06-17T00:34:13.6912811Z Temporarily overriding HOME='/home/runner/work/_temp/36d87f08-efaa-41b5-941b-020fe22baf4a' before making global git config changes
+2026-06-17T00:34:13.6914060Z Adding repository directory to the temporary git global config as a safe directory
+2026-06-17T00:34:13.6922055Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/my-stock-daily/my-stock-daily
+2026-06-17T00:34:13.6945630Z Deleting the contents of '/home/runner/work/my-stock-daily/my-stock-daily'
+2026-06-17T00:34:13.6947840Z ##[group]Initializing the repository
+2026-06-17T00:34:13.6950626Z [command]/usr/bin/git init /home/runner/work/my-stock-daily/my-stock-daily
+2026-06-17T00:34:13.7023882Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-06-17T00:34:13.7024941Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-06-17T00:34:13.7025751Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-06-17T00:34:13.7026261Z hint: call:
+2026-06-17T00:34:13.7026520Z hint:
+2026-06-17T00:34:13.7026819Z hint: 	git config --global init.defaultBranch <name>
+2026-06-17T00:34:13.7027172Z hint:
+2026-06-17T00:34:13.7027485Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-06-17T00:34:13.7027958Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-06-17T00:34:13.7028332Z hint:
+2026-06-17T00:34:13.7028581Z hint: 	git branch -m <name>
+2026-06-17T00:34:13.7028832Z hint:
+2026-06-17T00:34:13.7029184Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-06-17T00:34:13.7029753Z Initialized empty Git repository in /home/runner/work/my-stock-daily/my-stock-daily/.git/
+2026-06-17T00:34:13.7032128Z [command]/usr/bin/git remote add origin https://github.com/Wang518-001/my-stock-daily
+2026-06-17T00:34:13.7052800Z ##[endgroup]
+2026-06-17T00:34:13.7053404Z ##[group]Disabling automatic garbage collection
+2026-06-17T00:34:13.7055054Z [command]/usr/bin/git config --local gc.auto 0
+2026-06-17T00:34:13.7075099Z ##[endgroup]
+2026-06-17T00:34:13.7075653Z ##[group]Setting up auth
+2026-06-17T00:34:13.7078948Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-06-17T00:34:13.7099147Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-06-17T00:34:13.7320314Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-06-17T00:34:13.7340422Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-06-17T00:34:13.7498867Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-06-17T00:34:13.7520485Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-06-17T00:34:13.7681572Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-06-17T00:34:13.7704637Z ##[endgroup]
+2026-06-17T00:34:13.7705252Z ##[group]Fetching the repository
+2026-06-17T00:34:13.7709966Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +8771cbfc56e9d9eba3a9f32dd44c60ea70a26125:refs/remotes/origin/main
+2026-06-17T00:34:14.1314677Z From https://github.com/Wang518-001/my-stock-daily
+2026-06-17T00:34:14.1315341Z  * [new ref]         8771cbfc56e9d9eba3a9f32dd44c60ea70a26125 -> origin/main
+2026-06-17T00:34:14.1332788Z ##[endgroup]
+2026-06-17T00:34:14.1333296Z ##[group]Determining the checkout info
+2026-06-17T00:34:14.1334627Z ##[endgroup]
+2026-06-17T00:34:14.1338291Z [command]/usr/bin/git sparse-checkout disable
+2026-06-17T00:34:14.1365005Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-06-17T00:34:14.1384322Z ##[group]Checking out the ref
+2026-06-17T00:34:14.1387344Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-06-17T00:34:14.1417823Z Switched to a new branch 'main'
+2026-06-17T00:34:14.1419519Z branch 'main' set up to track 'origin/main'.
+2026-06-17T00:34:14.1425110Z ##[endgroup]
+2026-06-17T00:34:14.1451860Z [command]/usr/bin/git log -1 --format=%H
+2026-06-17T00:34:14.1467829Z 8771cbfc56e9d9eba3a9f32dd44c60ea70a26125
+2026-06-17T00:34:14.1626895Z ##[group]Run actions/setup-python@v5
+2026-06-17T00:34:14.1627203Z with:
+2026-06-17T00:34:14.1627424Z   python-version: 3.11
+2026-06-17T00:34:14.1627669Z   check-latest: false
+2026-06-17T00:34:14.1629884Z   token: ***
+2026-06-17T00:34:14.1630250Z   update-environment: true
+2026-06-17T00:34:14.1630514Z   allow-prereleases: false
+2026-06-17T00:34:14.1630767Z   freethreaded: false
+2026-06-17T00:34:14.1630995Z env:
+2026-06-17T00:34:14.1631938Z   OPENAI_API_KEY: ***
+2026-06-17T00:34:14.1632175Z   OPENAI_BASE_URL: 
+2026-06-17T00:34:14.1632402Z   OPENAI_MODEL: 
+2026-06-17T00:34:14.1632627Z   WECOM_WEBHOOK: 
+2026-06-17T00:34:14.1632848Z ##[endgroup]
+2026-06-17T00:34:14.2653509Z ##[group]Installed versions
+2026-06-17T00:34:14.2730254Z Successfully set up CPython (3.11.15)
+2026-06-17T00:34:14.2730932Z ##[endgroup]
+2026-06-17T00:34:14.2825731Z ##[group]Run pip install requests
+2026-06-17T00:34:14.2826071Z [36;1mpip install requests[0m
+2026-06-17T00:34:14.3019298Z shell: /usr/bin/bash -e {0}
+2026-06-17T00:34:14.3019578Z env:
+2026-06-17T00:34:14.3020396Z   OPENAI_API_KEY: ***
+2026-06-17T00:34:14.3020636Z   OPENAI_BASE_URL: 
+2026-06-17T00:34:14.3020859Z   OPENAI_MODEL: 
+2026-06-17T00:34:14.3021076Z   WECOM_WEBHOOK: 
+2026-06-17T00:34:14.3021507Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-06-17T00:34:14.3021927Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-06-17T00:34:14.3022343Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-06-17T00:34:14.3022718Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-06-17T00:34:14.3023107Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-06-17T00:34:14.3023487Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-06-17T00:34:14.3023813Z ##[endgroup]
+2026-06-17T00:34:17.2777225Z Collecting requests
+2026-06-17T00:34:17.3465183Z   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+2026-06-17T00:34:17.4724142Z Collecting charset_normalizer<4,>=2 (from requests)
+2026-06-17T00:34:17.4823403Z   Downloading charset_normalizer-3.4.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+2026-06-17T00:34:17.5715826Z Collecting idna<4,>=2.5 (from requests)
+2026-06-17T00:34:17.5810697Z   Downloading idna-3.18-py3-none-any.whl.metadata (6.1 kB)
+2026-06-17T00:34:17.7247308Z Collecting urllib3<3,>=1.26 (from requests)
+2026-06-17T00:34:17.7345465Z   Downloading urllib3-2.7.0-py3-none-any.whl.metadata (6.9 kB)
+2026-06-17T00:34:17.8730325Z Collecting certifi>=2023.5.7 (from requests)
+2026-06-17T00:34:17.8825676Z   Downloading certifi-2026.5.20-py3-none-any.whl.metadata (2.5 kB)
+2026-06-17T00:34:18.2017037Z Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+2026-06-17T00:34:18.6231487Z Downloading charset_normalizer-3.4.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (214 kB)
+2026-06-17T00:34:18.6719155Z Downloading idna-3.18-py3-none-any.whl (65 kB)
+2026-06-17T00:34:18.7620279Z Downloading urllib3-2.7.0-py3-none-any.whl (131 kB)
+2026-06-17T00:34:18.7770025Z Downloading certifi-2026.5.20-py3-none-any.whl (134 kB)
+2026-06-17T00:34:18.8923691Z Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+2026-06-17T00:34:19.0959134Z 
+2026-06-17T00:34:19.0967037Z Successfully installed certifi-2026.5.20 charset_normalizer-3.4.7 idna-3.18 requests-2.34.2 urllib3-2.7.0
+2026-06-17T00:34:19.1362145Z ##[group]Run python stock_analyzer.py
+2026-06-17T00:34:19.1362366Z [36;1mpython stock_analyzer.py[0m
+2026-06-17T00:34:19.1388376Z shell: /usr/bin/bash -e {0}
+2026-06-17T00:34:19.1388509Z env:
+2026-06-17T00:34:19.1389163Z   OPENAI_API_KEY: ***
+2026-06-17T00:34:19.1389287Z   OPENAI_BASE_URL: 
+2026-06-17T00:34:19.1389400Z   OPENAI_MODEL: 
+2026-06-17T00:34:19.1389514Z   WECOM_WEBHOOK: 
+2026-06-17T00:34:19.1389675Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-06-17T00:34:19.1389912Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-06-17T00:34:19.1390140Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-06-17T00:34:19.1390373Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-06-17T00:34:19.1390599Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-06-17T00:34:19.1391012Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-06-17T00:34:19.1391193Z ##[endgroup]
+2026-06-17T00:34:29.0804353Z 🚀 开始运行 A股每日分析 2026-06-17 00:34
+2026-06-17T00:34:29.0804861Z 📡 获取大盘指数...
+2026-06-17T00:34:29.0805274Z    大盘：上证指数: 4094.21 (-0.06%) | 深证成指: 15584.37 (+0.34%) | 创业板指: 4065.27 (+0.79%)
+2026-06-17T00:34:29.0805671Z 📡 获取自选股行情...
+2026-06-17T00:34:29.0805899Z    ✅ 智度股份(000676): 5.64 (+1.08%)
+2026-06-17T00:34:29.0806185Z    ✅ 中信证券(600030): 27.25 (+1.45%)
+2026-06-17T00:34:29.0806445Z    ✅ 克来机电(603960): 20.91 (+5.13%)
+2026-06-17T00:34:29.0806698Z    ✅ 东方财富(300059): 19.12 (+1.22%)
+2026-06-17T00:34:29.0806965Z    ✅ 浪潮信息(000977): 62.30 (-1.25%)
+2026-06-17T00:34:29.0807216Z    ✅ 高伟达(300465): 16.42 (-1.91%)
+2026-06-17T00:34:29.0807467Z    ✅ 一博科技(301366): 48.50 (-0.86%)
+2026-06-17T00:34:29.0807764Z 🤖 正在进行AI分析...
+2026-06-17T00:34:29.0807875Z 
+2026-06-17T00:34:29.0808016Z ==================================================
+2026-06-17T00:34:29.0808332Z 📈 A股盘中快报 06-17 00:34
+2026-06-17T00:34:29.0808449Z 
+2026-06-17T00:34:29.0808664Z 大盘：上证指数: 4094.21 (-0.06%) | 深证成指: 15584.37 (+0.34%) | 创业板指: 4065.27 (+0.79%)
+2026-06-17T00:34:29.0808898Z 
+2026-06-17T00:34:29.0808995Z —— 自选股 ——
+2026-06-17T00:34:29.0809212Z 🔴 智度股份(000676) 5.64 +1.08% 成交额1.42亿
+2026-06-17T00:34:29.0809490Z 🔴 中信证券(600030) 27.25 +1.45% 成交额59.69亿
+2026-06-17T00:34:29.0809757Z 🔴 克来机电(603960) 20.91 +5.13% 成交额2.62亿
+2026-06-17T00:34:29.0810027Z 🔴 东方财富(300059) 19.12 +1.22% 成交额87.49亿
+2026-06-17T00:34:29.0810303Z 🟢 浪潮信息(000977) 62.30 -1.25% 成交额32.45亿
+2026-06-17T00:34:29.0810566Z 🟢 高伟达(300465) 16.42 -1.91% 成交额4.20亿
+2026-06-17T00:34:29.0810826Z 🟢 一博科技(301366) 48.50 -0.86% 成交额6.36亿
+2026-06-17T00:34:29.0810972Z 
+2026-06-17T00:34:29.0811062Z —— AI分析 ——
+2026-06-17T00:34:29.0811700Z ⚠️ AI分析异常: Invalid URL '/chat/completions': No scheme supplied. Perhaps you meant https:///chat/completions?
+2026-06-17T00:34:29.0812110Z 
+2026-06-17T00:34:29.0812201Z ——
+2026-06-17T00:34:29.0812424Z 数据来源：新浪财经 | 仅供参考，不构成投资建议
+2026-06-17T00:34:29.0812670Z ==================================================
+2026-06-17T00:34:29.0812842Z 
+2026-06-17T00:34:29.0812944Z 📤 推送到企业微信...
+2026-06-17T00:34:29.0813176Z ⚠️ 未配置WECOM_WEBHOOK，跳过推送
+2026-06-17T00:34:29.0813447Z 消息内容：
+2026-06-17T00:34:29.0813636Z 📈 A股盘中快报 06-17 00:34
+2026-06-17T00:34:29.0813754Z 
+2026-06-17T00:34:29.0813969Z 大盘：上证指数: 4094.21 (-0.06%) | 深证成指: 15584.37 (+0.34%) | 创业板指: 4065.27 (+0.79%)
+2026-06-17T00:34:29.0814192Z 
+2026-06-17T00:34:29.0814283Z —— 自选股 ——
+2026-06-17T00:34:29.0814488Z 🔴 智度股份(000676) 5.64 +1.08% 成交额1.42亿
+2026-06-17T00:34:29.0814742Z 🔴 中信证券(600030) 27.25 +1.45% 成交额59.69亿
+2026-06-17T00:34:29.0815003Z 🔴 克来机电(603960) 20.91 +5.13% 成交额2.62亿
+2026-06-17T00:34:29.0815256Z 🔴 东方财富(300059) 19.12 +1.22% 成交额87.49亿
+2026-06-17T00:34:29.0815512Z 🟢 浪潮信息(000977) 62.30 -1.25% 成交额32.45亿
+2026-06-17T00:34:29.0815767Z 🟢 高伟达(300465) 16.42 -1.91% 成交额4.20亿
+2026-06-17T00:34:29.0816021Z 🟢 一博科技(301366) 48.50 -0.86% 成交额6.36亿
+2026-06-17T00:34:29.0816170Z 
+2026-06-17T00:34:29.0816283Z —— AI分析 ——
+2026-06-17T00:34:29.0816719Z ⚠️ AI分析异常: Invalid URL '/chat/completions': No scheme supplied. Perhaps you meant https:///chat/completions?
+2026-06-17T00:34:29.0817580Z 
+2026-06-17T00:34:29.0817665Z ——
+2026-06-17T00:34:29.0817858Z 数据来源：新浪财经 | 仅供参考，不构成投资建议
+2026-06-17T00:34:29.0818064Z ✅ 运行完成
+2026-06-17T00:34:29.1007054Z ##[group]Run echo "当前UTC时间：$(date)，北京时间=$(TZ=Asia/Shanghai date)"
+2026-06-17T00:34:29.1007363Z [36;1mecho "当前UTC时间：$(date)，北京时间=$(TZ=Asia/Shanghai date)"[0m
+2026-06-17T00:34:29.1035064Z shell: /usr/bin/bash -e {0}
+2026-06-17T00:34:29.1035205Z env:
+2026-06-17T00:34:29.1035752Z   OPENAI_API_KEY: ***
+2026-06-17T00:34:29.1035884Z   OPENAI_BASE_URL: 
+2026-06-17T00:34:29.1036001Z   OPENAI_MODEL: 
+2026-06-17T00:34:29.1036113Z   WECOM_WEBHOOK: 
+2026-06-17T00:34:29.1036268Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-06-17T00:34:29.1036504Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-06-17T00:34:29.1036736Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-06-17T00:34:29.1037096Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-06-17T00:34:29.1037307Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-06-17T00:34:29.1037517Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-06-17T00:34:29.1037722Z ##[endgroup]
+2026-06-17T00:34:29.1193443Z 当前UTC时间：Wed Jun 17 00:34:29 UTC 2026，北京时间=Wed Jun 17 08:34:29 CST 2026
+2026-06-17T00:34:29.1248900Z Post job cleanup.
+2026-06-17T00:34:29.2261590Z Post job cleanup.
+2026-06-17T00:34:29.2850841Z [command]/usr/bin/git version
+2026-06-17T00:34:29.2876602Z git version 2.54.0
+2026-06-17T00:34:29.2901145Z Temporarily overriding HOME='/home/runner/work/_temp/caef3603-a7c0-4d57-8725-e4355046f94b' before making global git config changes
+2026-06-17T00:34:29.2902096Z Adding repository directory to the temporary git global config as a safe directory
+2026-06-17T00:34:29.2905455Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/my-stock-daily/my-stock-daily
+2026-06-17T00:34:29.2931783Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-06-17T00:34:29.2954559Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-06-17T00:34:29.3125894Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-06-17T00:34:29.3141125Z http.https://github.com/.extraheader
+2026-06-17T00:34:29.3149397Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-06-17T00:34:29.3171307Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-06-17T00:34:29.3332985Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-06-17T00:34:29.3353962Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-06-17T00:34:29.3606069Z Cleaning up orphan processes
+2026-06-17T00:34:29.3807534Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/setup-python@v5. Actions will be forced to run with Node.js 24 by default starting June 16th, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
