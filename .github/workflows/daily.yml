@@ -1,0 +1,40 @@
+name: A股每日分析
+
+on:
+  schedule:
+    # 周一至周五：10:00/14:00/15:30（北京时间=UTC+8，中国不实行夏令时）
+    - cron: '0 2 * * 1-5'    # 北京时间 10:00
+    - cron: '0 6 * * 1-5'    # 北京时间 14:00
+    - cron: '30 7 * * 1-5'   # 北京时间 15:30
+  
+  # 支持手动触发
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
+      OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
+      WECOM_WEBHOOK: ${{ secrets.WECOM_WEBHOOK }}
+    
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+      
+      - name: 设置Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: 安装依赖
+        run: pip install requests
+      
+      - name: 运行分析
+        run: python stock_analyzer.py
+      
+      - name: 时区说明
+        if: always()
+        run: echo "当前UTC时间：$(date)，北京时间=$(TZ=Asia/Shanghai date)"
