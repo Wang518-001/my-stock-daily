@@ -7,6 +7,12 @@ __pycache__/
 venv/
 env/
 
+# Node.js
+node_modules/
+package*.json
+encrypt_secret.js
+set_secret.js
+
 # IDE
 .vscode/
 .idea/
