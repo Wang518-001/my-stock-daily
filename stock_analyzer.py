@@ -28,7 +28,7 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY") or ""
 OPENAI_BASE_URL = os.getenv("OPENAI_BASE_URL") or "https://api.deepseek.com/v1"
 OPENAI_MODEL = os.getenv("OPENAI_MODEL") or "deepseek-chat"
 
-WECOM_WEBHOOK = os.getenv("WECOM_WEBHOOK") or ""
+PUSHPLUS_TOKEN = os.getenv("PUSHPLUS_TOKEN") or ""
 
 # 推送时间：收盘后（15:30）和盘中（10:00, 14:00）
 PUSH_TIMES = ["10:00", "14:00", "15:30"]
@@ -173,25 +173,27 @@ def analyze_with_ai(stock_data_list, market_index):
     except Exception as e:
         return f"⚠️ AI分析异常: {str(e)[:200]}"
 
-# ============ 企业微信推送 ============
-def send_wecom(text):
-    """推送到企业微信机器人"""
-    if not WECOM_WEBHOOK:
-        print("⚠️ 未配置WECOM_WEBHOOK，跳过推送")
+# ============ PushPlus推送 ============
+def send_pushplus(title, text):
+    """推送到微信（通过PushPlus）"""
+    if not PUSHPLUS_TOKEN:
+        print("⚠️ 未配置PUSHPLUS_TOKEN，跳过推送")
         print(f"消息内容：\n{text}")
         return False
     
     try:
         payload = {
-            "msgtype": "text",
-            "text": {"content": text},
+            "token": PUSHPLUS_TOKEN,
+            "title": title,
+            "content": text,
+            "template": "markdown",
         }
         
-        resp = requests.post(WECOM_WEBHOOK, json=payload, timeout=10)
+        resp = requests.post("http://www.pushplus.plus/send", json=payload, timeout=15)
         result = resp.json()
         
-        if result.get("errcode") == 0:
-            print("✅ 推送成功")
+        if result.get("code") == 200:
+            print("✅ PushPlus推送成功")
             return True
         else:
             print(f"⚠️ 推送失败: {result}")
@@ -269,8 +271,10 @@ def main():
     print("="*50 + "\n")
     
     # 5. 推送
-    print("📤 推送到企业微信...")
-    send_wecom(report)
+    print("📤 推送消息到微信...")
+    now = datetime.now()
+    push_title = "📊 A股收盘日报" if now.hour >= 15 else "📈 A股盘中快报"
+    send_pushplus(push_title, report)
     
     print("✅ 运行完成")
 
