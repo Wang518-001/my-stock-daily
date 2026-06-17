@@ -25,8 +25,8 @@ STOCKS = [
 ]
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY") or ""
-OPENAI_BASE_URL = os.getenv("OPENAI_BASE_URL") or "https://api.openai.com/v1"
-OPENAI_MODEL = os.getenv("OPENAI_MODEL") or "gpt-4o-mini"
+OPENAI_BASE_URL = os.getenv("OPENAI_BASE_URL") or "https://api.deepseek.com/v1"
+OPENAI_MODEL = os.getenv("OPENAI_MODEL") or "deepseek-chat"
 
 WECOM_WEBHOOK = os.getenv("WECOM_WEBHOOK") or ""
 
